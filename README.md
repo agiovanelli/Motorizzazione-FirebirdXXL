@@ -1,11 +1,15 @@
 # Cos'è FirebirdXXL
 Firebird è un sistema della Motorizzazione Civile per gestire i veicoli e le targhe.
+
 XXL perché ci piace fare le cose in grande.
 
 ## Come si effettua la ricerca
 Sulla destra vi sono tre bottoni: Veicoli, Targhe e Revisioni
+
 Cliccando su ognuno dei pulsanti verrete portati in una pagina dove potrete cercare, ed eventualmente aggiungere, l'oggetto della vostra ricerca.
+
 Sulla sinistra di ogni pagina ci sono dei filtri che vi faciliteranno la ricerca.
+
 È inoltre possibile ordinare in modo crescente cliccando una volta sul simbolo accanto alla nome della colonna indicata e ordinarlo in modo decrescente cliccando due volte sulla stessa icona.
 
 ## I dati
@@ -13,6 +17,7 @@ Ogni pagina possiede un database con più di mille elementi contenenti le più d
 
 ## CRUD
 Per ogni tabella sono possibili tutte le pratiche CRUD:
+
 
 C - Creazione di un nuovo dato (veicolo, targa e revisione);
 
