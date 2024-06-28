@@ -30,7 +30,9 @@ D - Tutti i dati nelle tabelle sono eliminabili.
 
 - Per ogni pagina nel caso si volesse modificare qualche voce sono stati creati dei controlli per il buon inserimento (logico) delle modifiche.
 
-### Progetto a cura di
+## Progetto a cura di
 Luca Ciancio, 1079291
+
 Alessio Giovanelli, 1081610
+
 Fabio Izzo, 1080579
