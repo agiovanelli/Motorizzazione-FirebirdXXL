@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Luca Ciancio, Alessio Giovanelli, Fabio Izzo">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <title>Aggiungi</title>
+  <link rel="icon" href="../images/fenicebianca" type="image/png">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/code.js"></script>
+</head>
+<body onload="visualeAggiungi()">
+    <header>
+        <div class="header-container">
+            <div id="cambiologo">
+                <a href="home.php"><img src="images/fenicebianca" alt="icona fenice" class="icona" id="default"></a>
+                <a href="home.php"><img src="images/fenicearancione" alt="icona fenice" class="icona" id="hover"></a>
+              </div>
+            <h1 class="titolo">Aggiungi</h1>
+        </div>
+      </header>
+
+    <div id="filtro">
+      <div class="centrato">
+
+      </div>
+    </div>
+
+    <nav>
+        <div class="centrato">
+            <div class="elemento-menu">
+                <a href="home.php" class="link-bottone">
+                    <div class="contenitore-immagine">
+                        <div class="cambio-immagine">
+                            <img src="images/homebianca" alt="icona targa" width="50" height="50" class="img-default">
+                            <img src="images/homeblu" alt="icona targa" width="50" height="50" class="img-hover">
+                        </div>
+                    </div>
+                </a>
+                <div class="menu-dropdown">
+                    <span>Home</span>
+                </div>
+            </div>
+            <div class="elemento-menu">
+                <a href="veicolo.php" class="link-bottone">
+                    <div class="contenitore-immagine">
+                        <div class="cambio-immagine">
+                            <img src="images/veicolobianco" alt="icona targa" width="50" height="50" class="img-default">
+                            <img src="images/veicoloblu" alt="icona targa" width="50" height="50" class="img-hover">
+                        </div>
+                    </div>
+                </a>
+                <div class="menu-dropdown">
+                    <span>Veicoli</span>
+                </div>
+            </div>
+            <div class="elemento-menu">
+                <a href="targa.php" class="link-bottone">
+                    <div class="contenitore-immagine">
+                        <div class="cambio-immagine">
+                            <img src="images/targabianca" alt="icona targa" width="50" height="50" class="img-default">
+                            <img src="images/targablu" alt="icona targa" width="50" height="50" class="img-hover">
+                        </div>
+                    </div>
+                </a>
+                <div class="menu-dropdown">
+                    <span>Targhe</span>
+                </div>
+            </div>
+            <div class="elemento-menu">
+                <a href="revisione.php" class="link-bottone">
+                    <div class="contenitore-immagine">
+                        <div class="cambio-immagine">
+                            <img src="images/revisionebianca" alt="icona targa" width="50" height="50" class="img-default">
+                            <img src="images/revisioneblu" alt="icona targa" width="50" height="50" class="img-hover">
+                        </div>
+                    </div>
+                </a>
+                <div class="menu-dropdown">
+                    <span>Revisioni</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+<div id="contenutoAggiungi">
+    <div id="contenuto">
+      <div class="centrato">
+                <form id="formRicerca" method = "POST" onsubmit="inviaForm()">
+                <div id="visualVeicolo" style="display: none;">
+                    <h3>Per aggiungere un nuovo veicolo compila il modulo qua sotto:</h3>
+                    <br><label for="richiesta">Numero telaio</label><br>
+                    <input type="text" id="numTelaio" name="numTelaio"/><label for="text">  (inserire 17 caratteri)</label><br><br>
+                    <label for="richiesta">Marca</label><br>
+                    <input type="text" id="marca" name="marca"/><br><br>
+                    <label for="richiesta">Modello</label><br>
+                    <input type="text" id="modello" name="modello"/><br><br>
+                    <label for="richiesta">Data di produzione</label><br>
+                    <input type="date" id="dataProd" name="dataProd"/><br><br>
+                </div>
+                <div id="visualTarga" style="display: none;">
+                    <h3>Per aggiungere una nuova targa compila il modulo qua sotto:</h3>
+                    <br><label for="richiesta">Targa</label><br>
+                    <input type="text" id="targa" name="targa"/><label for="text">  (inserire: 2 lettere - 3 numeri - 2 lettere)</label><br><br>
+                    <label for="richiesta">Data di emissione</label><br>
+                    <input type="date" id="dataEm" name="dataEm"><br><br>
+                    <label for="richiesta">Numero Telaio del Veicolo</label><br>
+                    <input type="text" id="telaio" name="telaio"/><br><br>
+                </div>
+                <div id="visualRevisione" style="display: none;">
+                    <h3>Per aggiungere una nuova revisione compila il modulo qua sotto:</h3>
+                    <br><label for="richiesta">Targa</label><br >                   
+                    <input type="text" id="targa1" name="targa1"/><br><br>
+                    <label for="richiesta">Data ultima revisione</label><br>
+                    <input type="date" id="dataRev" name="dataRev"/><br><br>
+                    <label for="richiesta">Stato</label><br>
+                    <input type="radio" id="AssSi" name="Ass" value="positivo" onchange="spento2(this)">
+                    <label for="AssSi">Superata</label><br>
+                    <input type="radio" id="AssNo" name="Ass" value="negativo" onchange="spento2(this)">
+                    <label for="AssNo">Non superata</label><br>
+                    <div id="opzioneVisuale2" style="display: none;">
+                    <br><label for="menu">Seleziona un'opzione</label><br>
+                    <select name="menu" id="menu">
+                        <option value="NULL"></option>
+                        <option value="Pastiglie dei freni usurate">Pastiglie dei freni usurate</option>
+                        <option value="Luci non funzionanti">Luci non funzionanti</option>
+                        <option value="Pneumatici rovinati">Pneumatici rovinati</option>
+                        <option value="Emissioni nocive superano i limiti">Emissioni nocive superano i limiti</option>
+                        <option value="Sterzo non funzionante">Sterzo non funzionante</option>
+                        <option value="Freno a mano usurato">Freno a mano usurato</option>
+                        <option value="Parabrezza scheggiato">Parabrezza scheggiato</option>
+                    </select><br>
+                    </div><br>
+                </div>
+                <input type="hidden" id="tipoInput" name="tipo" value="">
+                <input type="submit" value="Aggiungi"/>
+            </form><br>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>
