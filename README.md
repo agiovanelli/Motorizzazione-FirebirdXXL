@@ -29,3 +29,8 @@ D - Tutti i dati nelle tabelle sono eliminabili.
 - Nella pagina di revisione non è possibile modificare la voce "Numero revisione" in quanto è un valore che si aggiorna automaticamente;
 
 - Per ogni pagina nel caso si volesse modificare qualche voce sono stati creati dei controlli per il buon inserimento (logico) delle modifiche.
+
+### Progetto a cura di
+Luca Ciancio, 1079291
+Alessio Giovanelli, 1081610
+Fabio Izzo, 1080579
