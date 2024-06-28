@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Luca Ciancio, Alessio Giovanelli, Fabio Izzo">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <title>Revisioni</title>
+  <link rel="icon" href="../images/fenicebianca" type="image/png">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/code.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+        <div id="cambiologo">
+            <a href="home.php"><img src="images/fenicebianca" alt="icona fenice" class="icona" id="default"></a>
+            <a href="home.php"><img src="images/fenicearancione" alt="icona fenice" class="icona" id="hover"></a>
+          </div>
+        <h1 class="titolo">Revisioni</h1>
+    </div>
+  </header>
+  <div id="filtro">
+    <div class="centrato">
+      <h2 style="text-align: center;">Ricerca</h2><br>
+      <form id="formRicerca" method="post" onSubmit="return creazioneQuery();">
+        <label for="richiesta">Targa</label><br>
+        <input type="text" id="targa"/><br><br>
+        <label for="richiesta">Data ultima revisione</label><br>
+        <input type="date" id="dataRev" name="dataRev"/><br><br>
+        <label for="richiesta">Superata</label><br>
+        <input type="radio" id="AssSi" name="Ass" value="positivo" onchange="spento2(this)">
+        <label for="AssSi">Si</label><br>
+        <input type="radio" id="AssNo" name="Ass" value="negativo" onchange="spento2(this)">
+        <label for="AssNo">No</label><br>
+        <div id="opzioneVisuale2" style="display: none;">
+          <br><label for="menu">Seleziona un'opzione</label><br>
+          <select style="width: 100%;" name="menu" id="menu">
+            <option value="NULL"></option>
+            <option value="Pastiglie dei freni usurate">Pastiglie dei freni usurate</option>
+            <option value="Luci non funzionanti">Luci non funzionanti</option>
+            <option value="Pneumatici rovinati">Pneumatici rovinati</option>
+            <option value="Emissioni nocive superano i limiti">Emissioni nocive superano i limiti</option>
+            <option value="Sterzo non funzionante">Sterzo non funzionante</option>
+            <option value="Freno a mano usurato">Freno a mano usurato</option>
+            <option value="Parabrezza scheggiato">Parabrezza scheggiato</option>
+          </select><br>
+        </div><br>
+        <input style="width: 50%;" type="submit" value="Azzera filtri"/>
+      </form><br>
+      <div>
+        <button onclick="aggiuntaModifica(3)" style="width: 100%;">
+          Aggiungi revisione
+        </button>
+      </div>
+    </div>
+  </div>
+  <nav>
+    <div class="centrato">
+        <div class="menu-item">
+            <a href="home.php" class="button">
+                <div class="image-container">
+                    <div id="cambio">
+                        <img src="images/homebianca" alt="icona targa" width="50" height="50" id="default">
+                        <img src="images/homeblu" alt="icona targa" width="50" height="50" id="hover">
+                    </div>
+                </div>
+            </a>
+            <div class="dropdown-content">
+                <span>Home</span>
+            </div>
+        </div>
+        <div class="menu-item">
+            <a href="veicolo.php" class="button">
+                <div class="image-container">
+                    <div id="cambio">
+                        <img src="images/veicolobianco" alt="icona targa" width="50" height="50" id="default">
+                        <img src="images/veicoloblu" alt="icona targa" width="50" height="50" id="hover">
+                    </div>
+                </div>
+            </a>
+            <div class="dropdown-content">
+                <span>Veicoli</span>
+            </div>
+        </div>
+        <div class="menu-item">
+            <a href="targa.php" class="button">
+                <div class="image-container">
+                    <div id="cambio">
+                        <img src="images/targabianca" alt="icona targa" width="50" height="50" id="default">
+                        <img src="images/targablu" alt="icona targa" width="50" height="50" id="hover">
+                    </div>
+                </div>
+            </a>
+            <div class="dropdown-content">
+                <span>Targhe</span>
+            </div>
+        </div>
+    </div>
+  </nav>
+</body>
+</html>
+
