@@ -1,4 +1,4 @@
-## Cos'è FirebirdXXL
+# Cos'è FirebirdXXL
 Firebird è un sistema della Motorizzazione Civile per gestire i veicoli e le targhe.
 XXL perché ci piace fare le cose in grande.
 
@@ -14,7 +14,7 @@ Ogni pagina possiede un database con più di mille elementi contenenti le più d
 ## CRUD
 Per ogni tabella sono possibili tutte le pratiche CRUD:
 
-# C - Creazione di un nuovo dato (veicolo, targa e revisione);
+C - Creazione di un nuovo dato (veicolo, targa e revisione);
 
 R - Tutte le tabella sono consultabili nelle apposite pagine;
 
